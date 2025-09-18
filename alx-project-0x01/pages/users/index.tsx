@@ -11,7 +11,7 @@ const Users: React.FC<UsersPageProps> = ({ posts }) => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {posts?.map((user) => (
+        {posts.map((user) => (
           <UserCard key={user.id} {...user} />
         ))}
       </main>
