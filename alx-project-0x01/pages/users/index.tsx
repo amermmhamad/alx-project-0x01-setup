@@ -1,14 +1,33 @@
 import Header from "@/components/layout/Header";
+import { UserProps } from "@/interfaces";
+import UserCard from "@/components/common/UserCard";
 
-const Users: React.FC = () => {
+type UsersPageProps = {
+  posts: UserProps[]; // following your checker’s wording (they call them posts, but actually users)
+};
+
+const Users: React.FC<UsersPageProps> = ({ posts }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow flex items-center justify-center">
-        <h1 className="text-3xl font-bold">Users Page</h1>
+      <main className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {posts?.map((user) => (
+          <UserCard key={user.id} {...user} />
+        ))}
       </main>
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const posts = await response.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default Users;

@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import PostCard from "@/components/common/PostCard";
 import Header from "@/components/layout/Header";
 import { PostProps } from "@/interfaces";
+import UserCard from "@/components/common/UserCard";
 
 type PostsPageProps = {
   posts: PostProps[];
