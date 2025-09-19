@@ -16,7 +16,7 @@ The goal is to learn how to set up a **Next.js + TypeScript** application, add r
 
 ## Project Structure
 
-alx-project-0x01/
+```alx-project-0x01/
 ├── components/
 │ ├── common/
 │ │ ├── Button.tsx
@@ -39,7 +39,7 @@ alx-project-0x01/
 ├── styles/
 │ └── globals.css
 └── tailwind.config.ts
-
+```
 
 ---
 
