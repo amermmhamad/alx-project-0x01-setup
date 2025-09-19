@@ -29,6 +29,11 @@ export interface UserProps {
   };
 }
 
+export interface UserModalData {
+  onClose: () => void;
+  onSubmit: (post: UserProps) => void;
+}
+
 export interface PostData {
   userId: number;
   id?: number;
