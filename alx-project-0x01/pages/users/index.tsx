@@ -3,7 +3,7 @@ import { UserProps } from "@/interfaces";
 import UserCard from "@/components/common/UserCard";
 
 type UsersPageProps = {
-  posts: UserProps[]; // following your checker’s wording (they call them posts, but actually users)
+  posts: UserProps[];
 };
 
 const Users: React.FC<UsersPageProps> = ({ posts }) => {
