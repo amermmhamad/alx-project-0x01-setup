@@ -52,6 +52,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
             value={user.name}
             onChange={handleChange}
             placeholder="Name"
+            required
             className="w-full px-4 py-2 border rounded-lg"
           />
           <input
@@ -59,6 +60,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
             value={user.username}
             onChange={handleChange}
             placeholder="Username"
+            required
             className="w-full px-4 py-2 border rounded-lg"
           />
           <input
@@ -66,6 +68,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
             value={user.email}
             onChange={handleChange}
             placeholder="Email"
+            required
             className="w-full px-4 py-2 border rounded-lg"
           />
           <input
@@ -73,6 +76,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
             value={user.phone}
             onChange={handleChange}
             placeholder="Phone"
+            required
             className="w-full px-4 py-2 border rounded-lg"
           />
           <input
@@ -89,6 +93,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               value={user.address.street}
               onChange={handleChange}
               placeholder="Street"
+              required
               className="px-4 py-2 border rounded-lg"
             />
             <input
@@ -96,6 +101,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               value={user.address.suite}
               onChange={handleChange}
               placeholder="Suite"
+              required
               className="px-4 py-2 border rounded-lg"
             />
             <input
@@ -103,6 +109,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               value={user.address.city}
               onChange={handleChange}
               placeholder="City"
+              required
               className="px-4 py-2 border rounded-lg"
             />
             <input
